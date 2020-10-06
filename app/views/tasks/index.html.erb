@@ -1,21 +1,23 @@
+<<<<<<< Updated upstream:app/views/tasks/index.html.erb
 <div class="mx-auto" style="width: 200px;">
 <h1>Task list</h1>
 </div>
 <h2><%= link_to 'Creat new Todo', tasks_path ,class: 'btn btn-info'%></h2>
 <table class="table">
+=======
+<h1>タスク一覧</h1>
+<table>
+>>>>>>> Stashed changes:app/views/index.html.erb
   <thead>
     <tr>
-    <th>タスク</th>
-    <th>編集</th>
-    <th>削除</th>
+      <th>タスク名</th>
     </tr>
   </thead>
   <tbody>
-
-  <% @tasks.each do |task| %>
-    <tr>
-      <td><%= task.title %></td>
-    </tr>
-  <% end %>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.title %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
