@@ -2,12 +2,14 @@ class TasksController < ApplicationController
   
 
 def index
-<<<<<<< Updated upstream
+
   @tasks = Task.all
 end
 
-=======
-  @tasks = Task.new
+
+def new
+  @tasks = Task.all
 end
->>>>>>> Stashed changes
+
+
 end
