@@ -1,23 +1,40 @@
-<<<<<<< Updated upstream:app/views/tasks/index.html.erb
-<div class="mx-auto" style="width: 200px;">
-<h1>Task list</h1>
+<div class="d-flex align-items-center">
+    <h1>Task </h1>
+    <div class="ml-auto posts_button">
+        <a class="btn btn-outline-info" href="/posts/new" role="button">投稿</a>
+    </div>
 </div>
-<h2><%= link_to 'Creat new Todo', tasks_path ,class: 'btn btn-info'%></h2>
-<table class="table">
-=======
-<h1>タスク一覧</h1>
-<table>
->>>>>>> Stashed changes:app/views/index.html.erb
-  <thead>
+<table class="table table-bordered border-primary table-hover table-sm posts_table">
+  <thead class="thead-dark">
     <tr>
-      <th>タスク名</th>
+      <th scope="col" style="width: 40px">No.</th>
+      <th scope="col" style="width: 700px">Task title</th>
+      <th scope="col">管理者</th>
+      <th scope="col">日付</th>
+      <th scope="col">更新日時</th>
     </tr>
   </thead>
   <tbody>
-    <% @tasks.each do |task| %>
-      <tr>
-        <td><%= task.title %></td>
-      </tr>
-    <% end %>
+    <tr>
+      <th scope="row">1</th>
+      <td>Test1</td>
+      <td>hoge</td>
+      <td>2018/4/1</td>
+      <td>2018/4/1</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Test1</td>
+      <td>hoge</td>
+      <td>2018/4/1</td>
+      <td>2018/4/1</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Test1</td>
+      <td>hoge</td>
+      <td>2018/4/1</td>
+      <td>2018/4/1</td>
+    </tr>
   </tbody>
 </table>
