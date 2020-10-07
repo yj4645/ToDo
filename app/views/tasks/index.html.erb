@@ -1,23 +1,30 @@
-<<<<<<< Updated upstream:app/views/tasks/index.html.erb
-<div class="mx-auto" style="width: 200px;">
-<h1>Task list</h1>
+<div class="container">
+  <div class="jumbotron m-3">
+    <h1 class="display-4">Hello, Bootstrap!</h1>
+    <hr class="my-4">
+    <p>This is the template of Ruby on Rails using Bootstrap.</p>
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal">
+      <i class="far fa-window-maximize"></i>
+      Click here
+    </button>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Hello!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<h2><%= link_to 'Creat new Todo', tasks_path ,class: 'btn btn-info'%></h2>
-<table class="table">
-=======
-<h1>タスク一覧</h1>
-<table>
->>>>>>> Stashed changes:app/views/index.html.erb
-  <thead>
-    <tr>
-      <th>タスク名</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @tasks.each do |task| %>
-      <tr>
-        <td><%= task.title %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
