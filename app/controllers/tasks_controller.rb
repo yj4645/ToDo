@@ -1,10 +1,8 @@
 class TasksController < ApplicationController
-  # before_action :move_to_index, exepct: [:index]
+
 
 def index
-
  @task = Task.includes(:user).order("created_at DESC")
-
 end
 
 
@@ -14,10 +12,10 @@ end
 
 def create
   Task.create(task_params)
-#   if @task.save
-# redirect_to root_path
-# end
 end
+
+
+
 
 private
 
@@ -25,7 +23,5 @@ def task_params
  params.require(:task).permit(:text, :title, :date_time).merge(user_id: current_user.id)
 end
 
-
-end
 
 end

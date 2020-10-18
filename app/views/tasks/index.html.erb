@@ -28,37 +28,30 @@
 <table class="table table-bordered border-primary table-hover table-sm posts_table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col" style="width: 40px">No.</th>
+  
       <th scope="col" style="width: 100px">Task title</th>
       <th scope="col" style="width: 600px">Task text</th>
-      <th scope="col">管理者</th>
-      <th scope="col">日付</th>
+    
+      <th scope="col" style="width: 100px">日付</th>
+    
    
     </tr>
   </thead>
   <tbody>
+  
+  <% @task.each do |t| %>
     <tr>
-      <th scope="row">1</th>
-      <td>Test1</td>
-         <td>Test1</td>
-      <td>hoge</td>
-      <td>2018/4/1</td>
+      <td><%= t.title %></td>
+      <td><%= t.text %></td>
+      <td><%= t.date_time %></td>
+      
+        
+  
+     
+
+      </td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Test1</td>
-         <td>Test1</td>
-      <td>hoge</td>
-      <td>2018/4/1</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Test1</td>
-         <td>Test1</td>
-      <td>hoge</td>
-      <td>2018/4/1</td>
-    </tr>
-    
+    <% end %>
   </tbody>
 </table>
      <img src="/assets/mac.png" alt="" style="width: 100%">
