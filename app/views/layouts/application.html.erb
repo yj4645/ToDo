@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ToDo</title>
+
+    <title> ToDo</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,16 +13,19 @@
   <body>
  <header class="header">
       <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">ToDo</a></h1>
+        <h1 class="grid-6"><a href="/">ToDoapp</a></h1>
         <div class="user_nav grid-6">
-          <a class="post" href="/tasks/new">投稿する</a>
+
         </div>
       </div>
     </header>
     <%= yield %>
     <footer>
+   
+        
+
       <p>
-        Copyright ToDo
+   
       </p>
     </footer>
   </body>
