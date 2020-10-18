@@ -1,40 +1,64 @@
 <div class="d-flex align-items-center">
-    <h1>Task </h1>
+    <h1>Task List </h1>
     <div class="ml-auto posts_button">
-        <a class="btn btn-outline-info" href="/posts/new" role="button">投稿</a>
+      <% if user_signed_in? %>
+          <div class="user_nav grid-6">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class: "btn btn-outline-info" %>
+            <%= link_to "投稿する", new_task_path, class: "btn btn-outline-info" %>
+          </div>
+        <% else %>
+          <div class="grid-6">
+<%= link_to 'ログイン',new_user_session_path, class: "btn btn-outline-info"  %>
+<%= link_to '新規登録',new_user_registration_path, class: "btn btn-outline-info"  %>
+          </div>
+        <% end %>
+
+        
+            <%# <span><%= current_user.nickname %>
+            <%# <ul class="user__info">
+              <li>
+                <%= link_to "マイページ", "/users/#{current_user.id}" %>
+                <%# <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+              </li>
+            </ul>
+          </span> 
+        
     </div>
 </div>
 <table class="table table-bordered border-primary table-hover table-sm posts_table">
   <thead class="thead-dark">
     <tr>
       <th scope="col" style="width: 40px">No.</th>
-      <th scope="col" style="width: 700px">Task title</th>
+      <th scope="col" style="width: 100px">Task title</th>
+      <th scope="col" style="width: 600px">Task text</th>
       <th scope="col">管理者</th>
       <th scope="col">日付</th>
-      <th scope="col">更新日時</th>
+   
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
       <td>Test1</td>
+         <td>Test1</td>
       <td>hoge</td>
-      <td>2018/4/1</td>
       <td>2018/4/1</td>
     </tr>
     <tr>
       <th scope="row">2</th>
       <td>Test1</td>
+         <td>Test1</td>
       <td>hoge</td>
-      <td>2018/4/1</td>
       <td>2018/4/1</td>
     </tr>
     <tr>
       <th scope="row">3</th>
       <td>Test1</td>
+         <td>Test1</td>
       <td>hoge</td>
       <td>2018/4/1</td>
-      <td>2018/4/1</td>
     </tr>
+    
   </tbody>
 </table>
+     <img src="/assets/mac.png" alt="" style="width: 100%">
