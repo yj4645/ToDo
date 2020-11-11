@@ -44,8 +44,16 @@
       <td><%= t.title %></td>
       <td><%= t.text %></td>
       <td><%= t.date_time %></td>
-      
+
+            
         
+
+        <td><%= link_to '削除', task_path(@task), method: :delete, class:'task-destroy' %></td>
+        
+      
+    
+
+          
   
      
 
