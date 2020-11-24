@@ -14,10 +14,10 @@ def create
   Task.create(task_params)
 end
 
-def destroy
-  @task = Task.find(params[:id])
-  @task.destroy
-end
+# def destroy
+#   @task = Task.find(params[:id])
+#   @task.destroy
+# end
 
 def edit
 end
