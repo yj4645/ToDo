@@ -14,11 +14,7 @@
         <% end %>
 
         
-            <%# <span><%= current_user.nickname %>
-            <%# <ul class="user__info">
-              <li>
-                <%= link_to "マイページ", "/users/#{current_user.id}" %>
-                <%# <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+
               </li>
             </ul>
           </span> 
@@ -32,7 +28,7 @@
       <th scope="col" style="width: 100px">Task title</th>
       <th scope="col" style="width: 600px">Task text</th>
     
-      <th scope="col" style="width: 100px">日付</th>
+      <th scope="col" style="width: 100px">Date</th>
     
    
     </tr>
@@ -48,8 +44,8 @@
             
         
 
-        <td><%= link_to '削除', task_path(@task), method: :delete, class:'task-destroy' %></td>
-        
+       <td><%= link_to 'Delete', task_path(@task), method: :delete, class:'task-destroy' %></td>
+         <td><%= link_to 'Edit', task_path(@task), method: :edit, class:'task-edit' %></td>
       
     
 
